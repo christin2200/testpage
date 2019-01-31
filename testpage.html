@@ -36,7 +36,7 @@ function show(obj, id)
 
 
 
-    <style>
+      <style>
         .ol-popup {
           position: absolute;
           width: 12px;
@@ -46,8 +46,8 @@ function show(obj, id)
           border-radius: 12px;	/* 高度 */
           left: -6px;
           top: -6px;
-        }
-    </style>
+         }
+        </style>
     </head>
 
       <div id="map" class="map"></div>
@@ -87,18 +87,6 @@ function show(obj, id)
           })
         });
 
-
-        /**
-         * Add a click handler to the map to render the popup.
-         */
-        map.on('singleclick', function(evt) {
-          var coordinate = evt.coordinate;
-          document.getElementById('map').value = ol.coordinate.toStringHDMS(ol.proj.transform(
-              coordinate, 'EPSG:3857', 'EPSG:4326'));
-
-
-          overlay.setPosition(coordinate);
-        });
       </script>
   </body>
 
